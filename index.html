@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StreamVibe – Streaming Tools</title>
+
+  <!-- Tailwind + Icon-Bibliotheken -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#00adb5'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-[#111111] text-gray-100">
+    <header class="fixed top-0 left-0 w-full bg-[#111111] bg-opacity-90 backdrop-blur-md shadow-sm z-50">
+        <nav class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+          
+          <!-- Logo + Name -->
+          <div class="flex items-center space-x-2">
+            <img src="https://i.ibb.co/HpMvDGxq/Color-logo-with-background.jpg" alt="StreamVibe Logo" class="h-10 w-auto">
+            <span class="text-xl font-semibold text-white">StreamVibe</span>
+          </div>
+      
+          <!-- Navigation -->
+          <div class="space-x-6 text-sm md:text-base">
+            <a href="#features" class="hover:text-primary transition">Features</a>
+            <a href="#geraete" class="hover:text-primary transition">Geräte</a>
+            <a href="#bestellen" class="m1-4 bg-primary text-white px-4 py-2 rounded-lg font-semibold hover:bg-teal-600 transition">
+                Jetzt bestellen
+              </a>              
+              <a href="/impressum.html" class="hover:text-primary transition">Kontakt</a>
+          </div>
+      
+        </nav>
+      </header>
+      
+          
+
+  <div class="h-16"></div>
+
+  <!-- Hero -->
+  <section class="py-20 bg-[#111111] text-center px-4" id="home">
+    <div class="max-w-3xl mx-auto">
+      <img src="https://i.ibb.co/HpMvDGxq/Color-logo-with-background.jpg" alt="StreamVibe Hero Logo" class="mx-auto mb-6 w-40 md:w-52">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Dein Streaming. Dein Vibe.</h1>
+      <p class="text-lg md:text-xl text-gray-300 mb-8">Die StreamVibe One+ Box bringt dir maximales Entertainment in 4K – ohne komplizierte Einrichtung, direkt startklar.</p>
+      <a href="#geraete" class="inline-block bg-primary hover:bg-teal-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">Jetzt entdecken</a>
+    </div>
+   <!-- Nach dem Hero-Content (vor Section #features) -->
+<div class="h-20 bg-gradient-to-b from-[#111111] to-[#1a1a1a]"></div>
+
+  </section>
+
+
+  <!-- Features -->
+  <section class="py-16 bg-[#1a1a1a] text-center px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">Deine Vorteile mit StreamVibe</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 justify-center">
+
+        <!-- Feature 1 -->
+        <div class="flex flex-col items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="15" x="2" y="7" rx="2" ry="2"/>
+            <polyline points="17 2 12 7 7 2"/>
+          </svg>
+          <h3 class="text-xl font-semibold text-white mb-2">4K Ultra HD</h3>
+          <p class="text-gray-400 text-sm">Genieße gestochen scharfe Qualität auf jedem Fernseher.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="flex flex-col items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 10V7a5 5 0 0 0-10 0v3H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V12a2 2 0 0 0-2-2h-1z"/>
+            <path d="M12 3a3 3 0 0 1 3 3v3H9V6a3 3 0 0 1 3-3z"/>
+          </svg>
+          <h3 class="text-xl font-semibold text-white mb-2">Widevine L1</h3>
+          <p class="text-gray-400 text-sm">Streaming auf höchstem Level – auch bei Netflix, Prime & Co.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="flex flex-col items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22v-5"/>
+            <path d="M9 8V2"/>
+            <path d="M15 8V2"/>
+            <path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/>
+          </svg>
+          <h3 class="text-xl font-semibold text-white mb-2">Plug & Play</h3>
+          <p class="text-gray-400 text-sm">Auspacken. Anschließen. Losstreamen.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="flex flex-col items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <path d="M12 17h.01"/>
+          </svg>
+          <h3 class="text-xl font-semibold text-white mb-2">Support inklusive</h3>
+          <p class="text-gray-400 text-sm">Hilfe bei Einrichtung und Fragen – direkt & unkompliziert.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="geraete" class="py-20 bg-[#111111] text-white px-4">
+    <div class="max-w-6xl mx-auto text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold">Unsere Streamvibe Geräte</h2>
+      <p class="text-gray-400 mt-4">Wähle dein perfektes Modell – abgestimmt auf deine Streaming-Ansprüche.</p>
+    </div>
+  
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      
+      <!-- Gerät 1: StreamVibe One+ -->
+      <div class="bg-[#1a1a1a] p-6 rounded-xl shadow-md hover:shadow-lg transition">
+        <img src="https://testsiegertv.com/wp-content/uploads/2022/06/Xiaomi-Box-4S-Max-mit-8K-Decoding.jpg" alt="StreamVibe One+" class="w-128 h-128 object-contain mx-auto mb-4">
+        <h3 class="text-xl font-semibold text-center mb-2">StreamVibe One+</h3>
+        <p class="text-gray-400 text-center mb-4">Unsere Premium-Box für höchste Ansprüche – 4K, Widevine L1 & Top-Performance.</p>
+        <ul class="text-sm text-gray-300 mb-6 space-y-2">
+            <li><i class="fas fa-tv text-primary mr-2"></i>4K Ultra HD Streaming</li>
+            <li><i class="fas fa-shield-alt text-primary mr-2"></i>Widevine L1 zertifiziert</li>
+            <li><i class="fas fa-microchip text-primary mr-2"></i>Bluetooth-Fernbedienung</li>
+            <li><i class="fas fa-sd-card text-primary mr-2"></i>32 GB Speicher & 4 GB RAM</li>
+          </ul>          
+        <div class="text-center">
+          <a href="#kontakt" class="inline-block bg-primary hover:bg-teal-600 text-white font-semibold py-2 px-6 rounded-lg transition">Mehr erfahren</a>
+        </div>
+      </div>
+  
+      <!-- Gerät 2: StreamVibe Lite -->
+      <div class="bg-[#1a1a1a] p-6 rounded-xl shadow-md hover:shadow-lg transition">
+        <img src="https://testsiegertv.com/wp-content/uploads/2022/06/Xiaomi-Box-4S-Max-mit-8K-Decoding.jpg" alt="StreamVibe Lite" class="w-128 h-128 object-contain mx-auto mb-4">
+        <h3 class="text-xl font-semibold text-center mb-2">StreamVibe Lite</h3>
+        <p class="text-gray-400 text-center mb-4">Die smarte Budget-Box für Einsteiger & Zweitgeräte – effizient & preiswert.</p>
+        <ul class="text-sm text-gray-300 mb-6 space-y-2">
+            <li><i class="fas fa-tv text-primary mr-2"></i>Full HD Streaming</li>
+            <li><i class="fas fa-compress-arrows-alt text-primary mr-2"></i>Platzsparendes Design</li>
+            <li><i class="fas fa-euro-sign text-primary mr-2"></i>Günstiger Einstiegspreis</li>
+            <li><i class="fas fa-plug text-primary mr-2"></i>Perfekt für Zweit-TV</li>
+          </ul>          
+        <div class="text-center">
+          <a href="#kontakt" class="inline-block bg-primary hover:bg-teal-600 text-white font-semibold py-2 px-6 rounded-lg transition">Mehr erfahren</a>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  <section class="bg-[#111111] text-white py-20 px-4" id="faq">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Häufige Fragen</h2>
+      <div class="space-y-4">
+  
+        <!-- FAQ 1 -->
+        <div class="border border-gray-700 rounded-lg">
+          <button class="w-full flex justify-between items-center px-4 py-3 text-left font-semibold faq-toggle">
+            Wie schließe ich die Box an?
+            <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+          </button>
+          <div class="px-6 py-4 hidden text-white bg-[#0e0e0e] rounded-b-lg border-t border-gray-700">
+            Die Box wird einfach per HDMI-Kabel am Fernseher angeschlossen – Strom rein, WLAN verbinden, fertig.
+          </div>
+        </div>
+  
+        <!-- FAQ 2 -->
+        <div class="border border-gray-700 rounded-lg">
+          <button class="w-full flex justify-between items-center px-4 py-3 text-left font-semibold faq-toggle">
+            Läuft Netflix in 4K mit der One+?
+            <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+          </button>
+          <div class="px-6 py-4 hidden text-white bg-[#0e0e0e] rounded-b-lg border-t border-gray-700">
+            Ja – die One+ besitzt Widevine L1 und unterstützt echtes 4K auf Netflix, Prime & Co.
+          </div>
+        </div>
+  
+        <!-- FAQ 3 -->
+        <div class="border border-gray-700 rounded-lg">
+          <button class="w-full flex justify-between items-center px-4 py-3 text-left font-semibold faq-toggle">
+            Was ist der Unterschied zwischen One+ und Lite?
+            <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+          </button>
+          <div class="px-6 py-4 hidden text-white bg-[#0e0e0e] rounded-b-lg border-t border-gray-700">
+            Die One+ bietet 4K-Streaming, Widevine L1, mehr Speicher und eine Bluetooth-Fernbedienung. Die Lite-Version ist ideal für Zweitgeräte oder Einsteiger – Full HD, kompakter & günstiger.
+          </div>
+        </div>
+  
+        <!-- FAQ 4 -->
+        <div class="border border-gray-700 rounded-lg">
+          <button class="w-full flex justify-between items-center px-4 py-3 text-left font-semibold faq-toggle">
+            Wie lange dauert der Versand?
+            <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+          </button>
+          <div class="px-6 py-4 hidden text-white bg-[#0e0e0e] rounded-b-lg border-t border-gray-700">
+            Der Versand erfolgt in der Regel innerhalb von 1–2 Werktagen nach Zahlungseingang. Du erhältst eine Trackingnummer per E-Mail.
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  </section>
+  
+  
+  </section>
+  
+  <section id="bestellen" class="py-20 bg-[#1a1a1a] text-white px-4">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Jetzt bestellen</h2>
+      <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  
+        <!-- Vorname -->
+        <div class="flex flex-col">
+          <label for="vorname" class="mb-2 text-sm font-medium">Vorname</label>
+          <input type="text" id="vorname" name="vorname" placeholder="Vorname" class="bg-[#111111] border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-primary" required>
+        </div>
+  
+        <!-- Nachname -->
+        <div class="flex flex-col">
+          <label for="nachname" class="mb-2 text-sm font-medium">Nachname</label>
+          <input type="text" id="nachname" name="nachname" placeholder="Nachname" class="bg-[#111111] border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-primary" required>
+        </div>
+  
+        <!-- E-Mail -->
+        <div class="flex flex-col md:col-span-2">
+          <label for="email" class="mb-2 text-sm font-medium">E-Mail</label>
+          <input type="email" id="email" name="email" placeholder="dein@mail.de" class="bg-[#111111] border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-primary" required>
+        </div>
+  
+        <!-- Straße & Hausnummer -->
+        <div class="flex flex-col md:col-span-2">
+          <label for="strasse" class="mb-2 text-sm font-medium">Straße & Hausnummer</label>
+          <input type="text" id="strasse" name="strasse" placeholder="Straße+Hausnummer" class="bg-[#111111] border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-primary" required>
+        </div>
+  
+        <!-- PLZ -->
+        <div class="flex flex-col">
+          <label for="plz" class="mb-2 text-sm font-medium">PLZ</label>
+          <input type="text" id="plz" name="plz" placeholder="deine PLZ" class="bg-[#111111] border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-primary" required>
+        </div>
+  
+        <!-- Stadt -->
+        <div class="flex flex-col">
+          <label for="stadt" class="mb-2 text-sm font-medium">Stadt</label>
+          <input type="text" id="stadt" name="stadt" placeholder="deine Stadt" class="bg-[#111111] border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-primary" required>
+        </div>
+  
+        <!-- Auswahl: Produkt -->
+        <div class="flex flex-col md:col-span-2">
+          <label for="produkt" class="mb-2 text-sm font-medium">Produkt auswählen</label>
+          <select id="produkt" name="produkt" class="bg-[#111111] border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-primary" required>
+            <option value="">Bitte wählen...</option>
+            <option value="oneplus">StreamVibe One+</option>
+            <option value="lite">StreamVibe Lite</option>
+          </select>
+        </div>
+  
+        <!-- Absenden -->
+        <div class="md:col-span-2 text-center mt-6">
+            <!-- AGB & Datenschutz -->
+            <div class="md:col-span-2 mb-4">
+    <label class="inline-flex items-start space-x-2 text-sm text-gray-300">
+      <input type="checkbox" name="agb" required class="mt-1 accent-primary">
+      <span>
+        Ich akzeptiere die <a href="/agb.html" class="text-primary underline hover:text-teal-500">AGB</a>
+        und die <a href="/datenschutz.html" class="text-primary underline hover:text-teal-500">Datenschutzerklärung</a>.
+      </span>      
+    </label>
+  </div>
+  <!-- Trust-Logos -->
+<div class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center text-sm text-gray-300">
+    <div class="flex flex-col items-center">
+      <i class="fas fa-undo-alt text-2xl text-primary mb-2"></i>
+      <span>30 Tage Rückgabe</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <i class="fas fa-lock text-2xl text-primary mb-2"></i>
+      <span>Sichere Zahlung</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <i class="fas fa-truck text-2xl text-primary mb-2"></i>
+      <span>Versand aus Deutschland</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <i class="fas fa-box text-2xl text-primary mb-2"></i>
+      <span>Lieferung in 2–3 Werktagen</span>
+    </div>
+  </div>
+  
+  <div class="md:col-span-2 text-center mt-6">
+    <!-- Button -->
+    <button type="submit" class="bg-primary hover:bg-teal-600 text-white font-semibold py-3 px-8 rounded-lg transition">
+      Bestellung absenden
+    </button>
+  
+    <!-- Erfolgsmeldung -->
+    <div id="erfolg" class="mt-4 inline-block text-sm text-green-400 hidden">
+      ✅ Danke für deine Bestellung! Wir melden uns bald.
+    </div>
+  </div>
+           
+      </form>
+    </div>
+  </section>
+  
+  <footer class="bg-[#111111] text-gray-400 py-10 text-sm px-4">
+    <div class="max-w-4xl mx-auto text-center space-y-4">
+  
+      <!-- Logo oder Name -->
+      <div class="flex justify-center">
+        <img src="https://i.ibb.co/HpMvDGxq/Color-logo-with-background.jpg" alt="StreamVibe Logo" class="h-32">
+      </div>
+  
+      <!-- Links -->
+      <div class="space-x-4">
+        <a href="/agb.html" class="hover:text-white transition">AGB</a>
+        <a href="/widerruf.html" class="hover:text-white transition">Widerruf</a>
+        <a href="/datenschutz.html" class="hover:text-white transition">Datenschutz</a>
+        <a href="/impressum.html" class="hover:text-white transition">Impressum</a>
+      </div>
+      
+  
+      <!-- Copyright -->
+      <div class="text-gray-500 mt-2">
+        © StreamVibe <span id="jahr"></span>
+      </div>
+    </div>
+  </footer>
+  
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+
+  <script>
+    const form = document.querySelector("form");
+    const erfolg = document.getElementById("erfolg");
+  
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      erfolg.classList.remove("hidden");
+      form.reset();
+  
+      setTimeout(() => {
+        erfolg.classList.add("hidden");
+      }, 10000); // 10 Sekunden (statt 5000)
+    });
+  </script>
+  
+  <script>
+    document.getElementById("jahr").textContent = new Date().getFullYear();
+  </script>
+  
+  <script>
+    document.querySelectorAll(".faq-toggle").forEach(button => {
+      button.addEventListener("click", () => {
+        const answer = button.nextElementSibling;
+        answer.classList.toggle("hidden");
+        button.querySelector("i").classList.toggle("rotate-180");
+      });
+    });
+  </script>
+  
+  
+</body>
+</html>

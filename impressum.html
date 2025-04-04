@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum – StreamVibe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#00adb5'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#111111] text-gray-300">
+
+  <!-- Header -->
+  <header class="bg-[#111111] py-6 text-center">
+    <img src="https://i.ibb.co/HpMvDGxq/Color-logo-with-background.jpg" alt="StreamVibe Logo" class="h-12 mx-auto mb-2">
+    <h1 class="text-2xl font-bold text-white">StreamVibe</h1>
+  </header>
+
+  <!-- Impressum Content -->
+  <main class="max-w-3xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-white mb-6">Impressum</h2>
+
+    <p class="mb-4">
+      <strong>Angaben gemäß § 5 TMG:</strong><br>
+      Sinan Sakacilar<br>
+      Esslinger Str. 15<br>
+      89537 Giengen an der Brenz
+    </p>
+
+    <p class="mb-4">
+      <strong>Kontakt:</strong><br>
+      Telefon: +49 15679 627306<br>
+      E-Mail: <a href="mailto:support@streamvibe.de" class="text-primary hover:underline">support@streamvibe.de</a>
+    </p>
+
+    <p class="mb-4">
+      <strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br>
+      Sinan Sakacilar<br>
+      Esslinger Str. 15<br>
+      89537 Giengen an der Brenz
+    </p>
+
+    <p class="text-sm text-gray-500 mt-10">
+      Plattform der EU-Kommission zur Online-Streitbeilegung: <a href="https://ec.europa.eu/consumers/odr" target="_blank" class="text-primary hover:underline">https://ec.europa.eu/consumers/odr</a><br>
+      Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+    </p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#111111] py-6 text-center text-sm text-gray-500">
+    © StreamVibe <span id="jahr"></span>
+  </footer>
+
+  <!-- Jahr-Script -->
+  <script>
+    document.getElementById("jahr").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

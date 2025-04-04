@@ -1,0 +1,48 @@
+.carousel-track {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .carousel-slide {
+    width: 50%; /* Zwei Geräte nebeneinander */
+    flex-shrink: 0;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-prev,
+  .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    z-index: 1;
+  }
+  
+  .carousel-prev {
+    left: 10px;
+  }
+  
+  .carousel-next {
+    right: 10px;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -100% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+  
+  .animated-gradient {
+    background-image: linear-gradient(to right, #1c1c1c 0%, #2a2a2a 50%, #1c1c1c 100%);
+    background-size: 200% auto;
+    animation: shimmer 3s linear infinite;
+  }
+  
+  

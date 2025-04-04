@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreamVibe – Streaming Tools</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#00adb5'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+        .carousel-track {
+            display: flex;
+            overflow: hidden;
+        }
+
+        .carousel-slide {
+            width: 50%; /* Setze hier 50% für zwei Geräte nebeneinander */
+            flex-shrink: 0;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-prev,
+        .carousel-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            z-index: 1;
+        }
+
+        .carousel-prev {
+            left: 10px;
+        }
+
+        .carousel-next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body class="bg-[#111111] text-gray-100">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full bg-[#111111] bg-opacity-90 backdrop-blur-md shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <img src="https://i.ibb.co/HpMvDGxq/Color-logo-with-background.jpg" alt="StreamVibe Logo" class="h-10 w-auto">
+        <span class="text-xl font-semibold text-white">StreamVibe</span>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="space-x-6 hidden md:flex">
+        <a href="#features" class="text-gray-300 hover:text-primary font-medium">Features</a>
+        <a href="#geraete" class="text-gray-300 hover:text-primary font-medium">Geräte</a>
+        <a href="#hilfe" class="text-gray-300 hover:text-primary font-medium">Hilfe</a>
+        <a href="#kontakt" class="text-gray-300 hover:text-primary font-medium">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Abstand für Header -->
+  <div class="h-16"></div>
+
+  <!-- Hero Section -->
+  <section class="py-20 bg-[#111111] text-center px-4" id="home">
+    <div class="max-w-3xl mx-auto">
+      <img src="https://i.ibb.co/HpMvDGxq/Color-logo-with-background.jpg" alt="StreamVibe Hero Logo" class="mx-auto mb-6 w-40 md:w-52">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Dein Streaming. Dein Vibe.</h1>
+      <p class="text-lg md:text-xl text-gray-300 mb-8">Die StreamVibe One+ Box bringt dir maximales Entertainment in 4K – ohne komplizierte Einrichtung, direkt startklar.</p>
+      <a href="#geraete" class="inline-block bg-primary hover:bg-teal-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">Jetzt entdecken</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+<section id="features" class="py-16 bg-[#111111] text-center px-4">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">Deine Vorteile mit StreamVibe</h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 justify-center">
+      <!-- Funktion 1: 4K Ultra HD -->
+      <div class="flex flex-col items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect width="20" height="15" x="2" y="7" rx="2" ry="2"/>
+  <polyline points="17 2 12 7 7 2"/>
+</svg>
+
+        <h3 class="text-xl font-semibold text-white mb-2">4K Ultra HD</h3>
+        <p class="text-gray-400 text-sm">Genieße gestochen scharfe Qualität auf jedem Fernseher.</p>
+      </div>
+
+      <!-- Funktion 2: Widevine L1 -->
+      <div class="flex flex-col items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M17 10V7a5 5 0 0 0-10 0v3H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V12a2 2 0 0 0-2-2h-1zM12 3a3 3 0 0 1 3 3v3H9V6a3 3 0 0 1 3-3zM6 12h12v10H6V12z"/>
+</svg>
+
+
+        <h3 class="text-xl font-semibold text-white mb-2">Widevine L1</h3>
+        <p class="text-gray-400 text-sm">Streaming auf höchstem Level – auch bei Netflix, Prime & Co.</p>
+      </div>
+
+      <!-- Funktion 3: Plug & Play -->
+      <div class="flex flex-col items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 22v-5"/>
+  <path d="M9 8V2"/>
+  <path d="M15 8V2"/>
+  <path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/>
+</svg>
+
+        <h3 class="text-xl font-semibold text-white mb-2">Plug & Play</h3>
+        <p class="text-gray-400 text-sm">Auspacken. Anschließen. Losstreamen.</p>
+      </div>
+
+      <!-- Funktion 4: Support inklusive -->
+      <div class="flex flex-col items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>
+  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+  <path d="M12 17h.01"/>
+</svg>
+
+        <h3 class="text-xl font-semibold text-white mb-2">Support inklusive</h3>
+        <p class="text-gray-400 text-sm">Hilfe bei Einrichtung und Fragen – direkt & unkompliziert.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

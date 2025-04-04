@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutzerklärung – StreamVibe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#00adb5'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#111111] text-gray-300">
+
+  <!-- Header -->
+  <header class="bg-[#111111] py-6 text-center">
+    <img src="https://i.ibb.co/HpMvDGxq/Color-logo-with-background.jpg" alt="StreamVibe Logo" class="h-12 mx-auto mb-2">
+    <h1 class="text-2xl font-bold text-white">StreamVibe</h1>
+  </header>
+
+  <!-- Datenschutzerklärung Content -->
+  <main class="max-w-3xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-white mb-6">Datenschutzerklärung</h2>
+
+    <p class="mb-4">Diese Datenschutzerklärung informiert Sie über die Art, den Umfang und Zweck der Verarbeitung personenbezogener Daten auf unserer Website <strong>streamvibe.de</strong>.</p>
+
+    <h3 class="text-xl font-semibold text-white mt-8 mb-2">1. Verantwortlicher</h3>
+    <p class="mb-4">
+      Sinan Sakacilar<br>
+      Esslinger Str. 15<br>
+      89537 Giengen an der Brenz<br>
+      E-Mail: <a href="mailto:sinan.sakacilar@mail.de" class="text-primary hover:underline">sinan.sakacilar@mail.de</a>
+    </p>
+
+    <h3 class="text-xl font-semibold text-white mt-8 mb-2">2. Erhebung und Verarbeitung personenbezogener Daten</h3>
+    <p class="mb-4">Personenbezogene Daten werden nur erhoben, wenn Sie uns diese im Rahmen einer Bestellung oder Kontaktaufnahme mitteilen. Diese Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.</p>
+
+    <h3 class="text-xl font-semibold text-white mt-8 mb-2">3. Kontaktformular / Bestellung</h3>
+    <p class="mb-4">Wenn Sie das Bestellformular nutzen, werden Ihre Angaben zwecks Bearbeitung der Anfrage sowie für den Fall von Anschlussfragen gespeichert. Die Datenübertragung erfolgt verschlüsselt.</p>
+
+    <h3 class="text-xl font-semibold text-white mt-8 mb-2">4. Weitergabe an Dritte</h3>
+    <p class="mb-4">Zur technischen Umsetzung und Automatisierung können Ihre Daten an folgende Dienstleister weitergeleitet werden:</p>
+    <ul class="list-disc list-inside mb-4">
+      <li><strong>Netlify</strong> (Hosting und Formularverarbeitung)</li>
+      <li><strong>Brevo (Sendinblue)</strong> (Versand von Bestätigungs-E-Mails)</li>
+      <li><strong>Zapier</strong> (Automatisierte Verarbeitung von Formularen)</li>
+    </ul>
+
+    <p class="mb-4">Diese Dienstleister verarbeiten Ihre Daten ausschließlich auf Grundlage von Verträgen zur Auftragsverarbeitung (AVV) gemäß Art. 28 DSGVO.</p>
+
+    <h3 class="text-xl font-semibold text-white mt-8 mb-2">5. Ihre Rechte</h3>
+    <p class="mb-4">Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer Daten sowie das Recht auf Datenübertragbarkeit. Bitte wenden Sie sich dazu an die oben genannte Kontaktadresse.</p>
+
+    <h3 class="text-xl font-semibold text-white mt-8 mb-2">6. Speicherfristen</h3>
+    <p class="mb-4">Wir speichern personenbezogene Daten nur so lange, wie es zur Abwicklung erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen.</p>
+
+    <h3 class="text-xl font-semibold text-white mt-8 mb-2">7. SSL-/TLS-Verschlüsselung</h3>
+    <p class="mb-4">Diese Seite nutzt aus Sicherheitsgründen eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie an „https://“ in der Adresszeile Ihres Browsers.</p>
+
+    <h3 class="text-xl font-semibold text-white mt-8 mb-2">8. Änderungen dieser Datenschutzerklärung</h3>
+    <p class="mb-4">Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen. Es gilt stets die aktuelle Version auf dieser Seite.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#111111] py-6 text-center text-sm text-gray-500">
+    © StreamVibe <span id="jahr"></span>
+  </footer>
+
+  <script>
+    document.getElementById("jahr").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

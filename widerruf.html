@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Widerrufsbelehrung – StreamVibe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#00adb5'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#111111] text-gray-300">
+
+  <!-- Header -->
+  <header class="bg-[#111111] py-6 text-center">
+    <img src="https://i.ibb.co/HpMvDGxq/Color-logo-with-background.jpg" alt="StreamVibe Logo" class="h-12 mx-auto mb-2">
+    <h1 class="text-2xl font-bold text-white">StreamVibe</h1>
+  </header>
+
+  <!-- Widerruf Content -->
+  <main class="max-w-3xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-white mb-6">Widerrufsbelehrung</h2>
+
+    <h3 class="text-xl font-semibold text-white mt-8 mb-2">Widerrufsrecht</h3>
+    <p class="mb-4">Sie haben das Recht, binnen 14 Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen.</p>
+
+    <p class="mb-4">Die Widerrufsfrist beträgt 14 Tage ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter die Ware in Besitz genommen haben bzw. hat.</p>
+
+    <h3 class="text-xl font-semibold text-white mt-8 mb-2">Um Ihr Widerrufsrecht auszuüben</h3>
+    <p class="mb-4">
+      Müssen Sie uns (Sinan Sakacilar, Esslinger Str. 15, 89537 Giengen an der Brenz,  
+      <a href="mailto:sinan.sakacilar@mail.de" class="text-primary hover:underline">sinan.sakacilar@mail.de</a>)  
+      mittels einer eindeutigen Erklärung (z. B. per E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren.
+    </p>
+
+    <p class="mb-4">Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Frist absenden.</p>
+
+    <h3 class="text-xl font-semibold text-white mt-8 mb-2">Folgen des Widerrufs</h3>
+    <p class="mb-4">Wenn Sie diesen Vertrag widerrufen, erstatten wir Ihnen alle Zahlungen, die wir von Ihnen erhalten haben, einschließlich der Lieferkosten, unverzüglich und spätestens binnen 14 Tagen ab dem Tag des Eingangs Ihres Widerrufs.</p>
+
+    <p class="mb-4">Für die Rückzahlung verwenden wir dasselbe Zahlungsmittel, das Sie bei der ursprünglichen Transaktion eingesetzt haben, es sei denn, es wurde ausdrücklich etwas anderes vereinbart.</p>
+
+    <p class="mb-4">Wir können die Rückzahlung verweigern, bis wir die Ware zurückerhalten haben oder Sie den Nachweis erbracht haben, dass Sie die Ware zurückgesandt haben – je nachdem, welches der frühere Zeitpunkt ist.</p>
+
+    <h3 class="text-xl font-semibold text-white mt-8 mb-2">Rücksendung der Ware</h3>
+    <p class="mb-4">Sie haben die Ware unverzüglich und in jedem Fall spätestens binnen 14 Tagen ab dem Tag, an dem Sie uns über den Widerruf informieren, an uns zurückzusenden.</p>
+
+    <p class="mb-4">Die unmittelbaren Kosten der Rücksendung tragen Sie.</p>
+
+    <h3 class="text-xl font-semibold text-white mt-8 mb-2">Ausschluss des Widerrufs</h3>
+    <p class="mb-4">Das Widerrufsrecht besteht nicht bei versiegelten Waren, die aus Gründen des Gesundheitsschutzes oder der Hygiene nicht zur Rückgabe geeignet sind, wenn ihre Versiegelung nach der Lieferung entfernt wurde.</p>
+
+    <p class="text-sm text-gray-500 mt-10 italic">Stand: April 2025</p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#111111] py-6 text-center text-sm text-gray-500">
+    © StreamVibe <span id="jahr"></span>
+  </footer>
+
+  <script>
+    document.getElementById("jahr").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
