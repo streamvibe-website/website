@@ -401,7 +401,13 @@
         mobileMenu.classList.add('hidden');
       });
     });
+  
+    // Scrollposition zurücksetzen bei Seite-Neuladen
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    };
   </script>
+  
   
   
   
