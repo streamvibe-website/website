@@ -28,28 +28,39 @@
 </head>
 <body class="bg-[#111111] text-gray-100">
     <header class="fixed top-0 left-0 w-full bg-[#111111] bg-opacity-90 backdrop-blur-md shadow-sm z-50">
-        <nav class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-          
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           <!-- Logo + Name -->
           <div class="flex items-center space-x-2">
-            <img src="https://i.ibb.co/HpMvDGxq/Color-logo-with-background.jpg" alt="StreamVibe Logo" class="h-10 w-auto">
+            <img src="https://i.ibb.co/HpMvDGxq/Color-logo-with-background.jpg" alt="StreamVibe Logo" class="h-8">
             <span class="text-xl font-semibold text-white">StreamVibe</span>
           </div>
       
-          <!-- Navigation -->
-          <div class="space-x-6 text-sm md:text-base">
+          <!-- Burger Button (mobil) -->
+          <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+      
+          <!-- Desktop-Navigation -->
+          <div id="desktop-menu" class="hidden md:flex space-x-6 text-sm md:text-base items-center">
             <a href="#features" class="hover:text-primary transition">Features</a>
             <a href="#geraete" class="hover:text-primary transition">Geräte</a>
-            <a href="#bestellen" class="m1-4 bg-primary text-white px-4 py-2 rounded-lg font-semibold hover:bg-teal-600 transition">
-                Jetzt bestellen
-              </a>              
-              <a href="/impressum.html" class="hover:text-primary transition">Kontakt</a>
+            <a href="impressum.html" class="hover:text-primary transition">Kontakt</a>
+            <a href="#bestellen" class="ml-4 bg-primary text-white px-4 py-2 rounded-lg font-semibold hover:bg-teal-600 transition">Jetzt bestellen</a>
           </div>
+        </div>
       
-        </nav>
+        <!-- Mobile-Menü -->
+        <div id="mobile-menu" class="md:hidden hidden flex flex-col mt-4 space-y-4 px-4">
+          <a href="#features" class="hover:text-primary">Features</a>
+          <a href="#geraete" class="hover:text-primary">Geräte</a>
+          <a href="impressum.html" class="hover:text-primary">Kontakt</a>
+          <a href="#bestellen" class="bg-primary hover:bg-teal-600 text-white text-center py-2 rounded-lg transition">
+            Jetzt bestellen
+          </a>
+        </div>
       </header>
       
-          
+    
 
   <div class="h-16"></div>
 
@@ -375,6 +386,15 @@
       });
     });
   </script>
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+  
+    toggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+  
   
   
 </body>
