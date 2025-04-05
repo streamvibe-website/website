@@ -150,9 +150,11 @@
             <li><i class="fas fa-microchip text-primary mr-2"></i>Bluetooth-Fernbedienung</li>
             <li><i class="fas fa-sd-card text-primary mr-2"></i>32 GB Speicher & 4 GB RAM</li>
           </ul>          
-        <div class="text-center">
-          <a href="#kontakt" class="inline-block bg-primary hover:bg-teal-600 text-white font-semibold py-2 px-6 rounded-lg transition">Mehr erfahren</a>
-        </div>
+          <div class="text-center">
+            <button onclick="openVideo('J9QaAoUdmT0')" class="bg-primary hover:bg-teal-600 text-white font-semibold py-2 px-6 rounded-lg transition">
+              Mehr erfahren
+            </button>
+          </div>
       </div>
   
       <!-- Gerät 2: StreamVibe Lite -->
@@ -166,9 +168,11 @@
             <li><i class="fas fa-euro-sign text-primary mr-2"></i>Günstiger Einstiegspreis</li>
             <li><i class="fas fa-plug text-primary mr-2"></i>Perfekt für Zweit-TV</li>
           </ul>          
-        <div class="text-center">
-          <a href="#kontakt" class="inline-block bg-primary hover:bg-teal-600 text-white font-semibold py-2 px-6 rounded-lg transition">Mehr erfahren</a>
-        </div>
+          <div class="text-center">
+            <button onclick="openVideo('J9QaAoUdmT0')" class="bg-primary hover:bg-teal-600 text-white font-semibold py-2 px-6 rounded-lg transition">
+              Mehr erfahren
+            </button>
+          </div>
       </div>
   
     </div>
@@ -424,7 +428,29 @@
 
   </script>
   
+  <script>
+    function openVideo(videoId) {
+      const overlay = document.getElementById('videoOverlay');
+      const player = document.getElementById('ytPlayer');
+      player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      overlay.classList.remove('hidden');
+    }
   
+    function closeVideo() {
+      const overlay = document.getElementById('videoOverlay');
+      const player = document.getElementById('ytPlayer');
+      player.src = "";
+      overlay.classList.add('hidden');
+    }
+  </script>
+  
+  <!-- Video Overlay -->
+<div id="videoOverlay" class="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center hidden">
+    <div class="relative w-full max-w-md md:max-w-2xl aspect-video">
+      <iframe id="ytPlayer" class="w-full h-full rounded-lg" src="" title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <button onclick="closeVideo()" class="absolute top-2 right-2 text-white text-2xl font-bold hover:text-gray-300 transition">&times;</button>
+    </div>
+  </div>
   
   
   
