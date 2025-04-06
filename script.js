@@ -6,7 +6,7 @@ form.addEventListener("submit", function (e) {
 
   const formData = new FormData(form);
 
-  fetch("https://hooks.zapier.com/hooks/catch/22285447/2c7jjgt/", {
+  fetch("https://hooks.zapier.com/hooks/catch/22285447/2cjuny5/", {
     method: "POST",
     body: formData
   })
