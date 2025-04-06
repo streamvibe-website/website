@@ -1,4 +1,4 @@
-const form = document.querySelector("form");
+const form = document.getElementById("bestellformular");
 const erfolg = document.getElementById("erfolg");
 
 form.addEventListener("submit", function (e) {
@@ -6,7 +6,7 @@ form.addEventListener("submit", function (e) {
 
   const formData = new FormData(form);
 
-  fetch(form.action, {
+  fetch("https://hooks.zapier.com/hooks/catch/22285447/2c7jjgt/", {
     method: "POST",
     body: formData
   })
