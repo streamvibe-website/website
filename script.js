@@ -4,11 +4,14 @@ const erfolg = document.getElementById("erfolg");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const formData = new FormData(form);
+  const formData = Object.fromEntries(new FormData(form));
 
   fetch("https://hook.eu2.make.com/9tosko1a8z34so62lz6d2op3p7rwipi2", {
     method: "POST",
-    body: formData
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(formData)
   })
   .then(() => {
     erfolg.classList.remove("hidden");
