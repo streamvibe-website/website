@@ -1,3 +1,6 @@
+console.log("script.js wurde geladen ✅");
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("bestellformular");
   const erfolg = document.getElementById("erfolg");
