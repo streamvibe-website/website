@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const erfolg = document.getElementById("erfolg");
 
   form.addEventListener("submit", function () {
-    // ✉️ Kundenmail via EmailJS
+    // ✉️ Kundenmail via EmailJS (läuft im Hintergrund)
     console.log("Sende Kundenmail...");
     emailjs.sendForm("streamvibe_ionos", "template_d0ckp5q", form)
       .then(() => {
@@ -15,13 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("❌ Fehler bei Kundenmail:", error);
       });
 
-    // ✅ Erfolgsmeldung anzeigen
+    // ✅ Erfolgsmeldung anzeigen – und Formular NICHT sofort resetten
     erfolg.classList.remove("hidden");
-    setTimeout(() => erfolg.classList.add("hidden"), 10000);
 
-    // ✅ Formular zurücksetzen (nur visuell – Daten wurden schon abgeschickt)
-    form.reset();
-
-    // ❗️Wichtig: KEIN `e.preventDefault()` → damit FormSubmit funktioniert!
+    // ⏱️ Warten, damit FormSubmit zuerst senden kann (dauert meist nur < 1 Sekunde)
+    setTimeout(() => {
+      form.reset();
+      erfolg.classList.add("hidden");
+    }, 1500); // 1,5 Sekunden warten, bevor alles zurückgesetzt wird
   });
 });
