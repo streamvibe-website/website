@@ -475,7 +475,30 @@
     </div>
   </div>
   
-  
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("DEIN_PUBLIC_KEY_HIER"); // ← von deinem EmailJS-Dashboard
+  })();
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('bestellformular');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm('streamvibe_ionos', 'template_d0ckp5q', this)
+        .then(() => {
+          alert("Bestellung erfolgreich abgeschickt!");
+          form.reset();
+        }, (error) => {
+          console.log("FEHLER:", error);
+          alert("Es gab ein Problem beim Absenden. Bitte versuch’s nochmal.");
+        });
+    });
+  });
+</script>
+
   
   
 </body>
