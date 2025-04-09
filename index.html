@@ -478,26 +478,10 @@
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
   (function(){
-    emailjs.init("rOOWW8c_d8K5xm4B9"); // Ersetzen durch deinen EmailJS Public Key
+    emailjs.init("rOOWW8c_d8K5xm4B9");
   })();
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('bestellformular');
-
-    form.addEventListener('submit', function (e) {
-      // NICHT verhindern, damit FormSubmit trotzdem auslöst!
-      // Kein e.preventDefault()
-
-      // Daten parallel über EmailJS senden (für Kundenmail)
-      emailjs.sendForm('streamvibe_ionos', 'template_d0ckp5q', this)
-        .then(() => {
-          console.log("Kundenmail erfolgreich versendet.");
-        }, (error) => {
-          console.error("Fehler bei Kundenmail:", error);
-        });
-    });
-  });
 </script>
+
 
 
   
