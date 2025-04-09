@@ -15,13 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("❌ Fehler bei Kundenmail:", error);
       });
 
-    // ✅ Erfolgsmeldung anzeigen – und Formular NICHT sofort resetten
+    // ✅ Erfolgsmeldung anzeigen (optional, unabhängig von E-Mail)
     erfolg.classList.remove("hidden");
 
-    // ⏱️ Warten, damit FormSubmit zuerst senden kann (dauert meist nur < 1 Sekunde)
+    // 🕒 Reset erst verzögert – damit FormSubmit Daten nicht verliert
     setTimeout(() => {
       form.reset();
       erfolg.classList.add("hidden");
-    }, 1500); // 1,5 Sekunden warten, bevor alles zurückgesetzt wird
+    }, 1500);
   });
 });
