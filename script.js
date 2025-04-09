@@ -2,11 +2,9 @@ console.log("script.js wurde geladen ✅");
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("bestellformular");
-  const erfolg = document.getElementById("erfolg");
 
   form.addEventListener("submit", function () {
-    // ✉️ Kundenmail via EmailJS (läuft im Hintergrund)
-    console.log("Sende Kundenmail...");
+    // ✉️ Kundenmail via EmailJS (läuft im Hintergrund, beeinflusst FormSubmit NICHT!)
     emailjs.sendForm("streamvibe_ionos", "template_d0ckp5q", form)
       .then(() => {
         console.log("✅ Kundenmail erfolgreich versendet.");
@@ -15,13 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("❌ Fehler bei Kundenmail:", error);
       });
 
-    // ✅ Erfolgsmeldung anzeigen (optional, unabhängig von E-Mail)
-    erfolg.classList.remove("hidden");
-
-    // 🕒 Reset erst verzögert – damit FormSubmit Daten nicht verliert
-    setTimeout(() => {
-      form.reset();
-      erfolg.classList.add("hidden");
-    }, 1500);
+    // ❗️ NICHT: form.reset()
+    // ❗️ NICHT: e.preventDefault()
   });
 });
