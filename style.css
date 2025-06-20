@@ -297,9 +297,10 @@ body {
   }
   
 
-  .desktop-nav {
+  .nav-right {
     display: flex;
   }
+  
   
   .burger {
     display: none;
@@ -347,9 +348,10 @@ body {
   
   /* 👇 Hier ist die mobile Umschaltung */
   @media (max-width: 768px) {
-    .desktop-nav {
-      display: none !important;
-    }
+    .nav-right {
+        display: none !important;
+      }
+      
   
     .desktop-only {
       display: none !important;
