@@ -28,21 +28,31 @@
     </nav>
   </header>
 
-  <!-- Hero Section mit Video -->
   <section class="hero" id="start">
-    <video autoplay muted loop playsinline class="hero-video">
-      <source src="assets/heros/hero-main.mp4" type="video/mp4">
-      Dein Browser unterstützt keine Videos.
-    </video>
+    <div class="hero-video-wrapper">
+      <video autoplay muted loop playsinline class="hero-video desktop-only">
+        <source src="assets/heros/hero-main.mp4" type="video/mp4">
+      </video>
+      <video autoplay muted loop playsinline class="hero-video mobile-only">
+        <source src="assets/heros/hero-main-mobile.mp4" type="video/mp4">
+      </video>
+    </div>
   </section>
+  
+  
 
-   <!-- 2-Hero Section mit Video -->
-   <section class="hero">
-    <video autoplay muted loop playsinline class="hero-video">
-      <source src="assets/heros/hero-tv.mp4" type="video/mp4">
-      Dein Browser unterstützt keine Videos.
-    </video>
+  <section class="hero">
+    <div class="hero-video-wrapper">
+      <video autoplay muted loop playsinline class="hero-video desktop-only">
+        <source src="assets/heros/hero-tv.mp4" type="video/mp4">
+      </video>
+      <video autoplay muted loop playsinline class="hero-video mobile-only">
+        <source src="assets/heros/hero-tv-mobile.mp4" type="video/mp4">
+      </video>
+    </div>
   </section>
+  
+  
 
 <!-- 3-Hero Section -->
 <section class="hero-image">
