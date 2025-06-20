@@ -297,26 +297,11 @@ body {
   }
   
 
-  .desktop-only {
-    display: block;
+  .desktop-nav {
+    display: flex;
   }
   
-  .mobile-only {
-    display: none;
-  }
-  
-  @media (max-width: 768px) {
-    .desktop-only {
-      display: none !important;
-    }
-  
-    .mobile-only {
-      display: block !important;
-    }
-  }
-  
-  /* Burger-Icon */
-.burger {
+  .burger {
     display: none;
     flex-direction: column;
     cursor: pointer;
@@ -351,13 +336,35 @@ body {
     font-weight: 600;
   }
   
+  /* Desktop-/Mobile-Switch */
+  .desktop-only {
+    display: block;
+  }
+  
+  .mobile-only {
+    display: none;
+  }
+  
+  /* 👇 Hier ist die mobile Umschaltung */
   @media (max-width: 768px) {
     .desktop-nav {
-      display: none;
+      display: none !important;
+    }
+  
+    .desktop-only {
+      display: none !important;
+    }
+  
+    .mobile-only {
+      display: block !important;
     }
   
     .burger {
-      display: flex;
+      display: flex !important;
+    }
+  
+    .mobile-nav {
+      display: none;
     }
   
     .mobile-nav.active {
