@@ -76,7 +76,8 @@
 
 
     <h2>StreamVibe Nova bestellen</h2>
-    <form action="https://formsubmit.co/bestellung@streamvibe.de" method="POST">
+    <form id="bestellForm">
+
       <label>Vorname</label>
       <input type="text" name="Vorname" placeholder="Vorname" required>
   
@@ -168,7 +169,26 @@
   </script>
   
 
-
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("rOOWW8c_d8K5xm4B9"); // dein Public Key
+    })();
+  
+    document.getElementById("bestellForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+  
+      emailjs.sendForm('service_streamvibe', 'template_d0ckp5q', this)
+        .then(function() {
+          alert("Danke für deine Bestellung! Du bekommst gleich eine Bestätigung per E-Mail.");
+          document.getElementById("bestellForm").reset();
+        }, function(error) {
+          console.log('FAILED...', error);
+          alert("Fehler beim Absenden. Bitte versuch’s nochmal.");
+        });
+    });
+  </script>
+  
   
 
   
