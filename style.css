@@ -23,44 +23,60 @@ body {
   }
   
   /* Navigation */
-  .navbar {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    padding: 1.2rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 10;
-  }
-  
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 80px; /* Einheitliche Höhe */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  height: 100%; /* Höhe anpassen für Zentrierung */
+  padding: 0.5rem 0; /* optional */
+  transition: color 0.3s;
+}
+
+.nav-right a:hover {
+  color: #00ACB4;
+}
+
+.order-button {
+  background-color: #00ACB4;
+  color: black !important;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0;
+  width: 150px; /* z. B. breiter als vorher */
+  text-align: center;
+  display: inline-block;
+}
 
 
-  .logo {
-    height: 40px;
-  }
-  
-  .nav-right a {
-    margin-left: 2rem;
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
-  
-  .nav-right a:hover {
-    color: #00ACB4;
-  }
-  
-  .order-button {
-    background-color: #00ACB4;
-    padding: 0.6rem 1.2rem;
-    border-radius: 20px;
-    color: black !important;
-    font-weight: bold;
-  }
-  
+
+
   /* Hero */
   .hero {
     position: relative;
