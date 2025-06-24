@@ -56,19 +56,19 @@
   </section>
   
   
-  
-
-<!-- 3-Hero Section -->
-<section class="hero-image">
-    <img src="assets/heros/hero-box-info.png" alt="StreamVibe Nova Box">
-  </section>
-  
-
-<!-- 4-Hero Section box image-->
+  <!-- 3-Hero Section box image-->
   <section class="hero-image" id="nova">
-    <img src="assets/heros/hero-box.png" alt="StreamVibe Nova TV Ansicht">
+    <img src="assets/heros/hero-box.mp4" alt="StreamVibe Nova TV Ansicht">
   </section>
   
+
+<!-- 4-Hero Section -->
+<section class="hero-image">
+    <img src="assets/heros/hero-box-info.mp4" alt="StreamVibe Nova Box">
+  </section>
+  
+
+
 <!-- 5 - Offenes Bestellformular -->
 
 <div id="kontakt"></div>
@@ -108,7 +108,7 @@
       </label>
   
       <button type="submit">Bestellung absenden</button>
-      <input type="hidden" name="order_id" id="order_id">
+      
 
 
     </form>
@@ -196,8 +196,6 @@ let count = parseInt(localStorage.getItem(counterKey)) || 1;
 const paddedCount = String(count).padStart(3, '0');
 const orderId = `SV-${dateStr}-${paddedCount}`;
 
-// Füge die ID ins Formular ein
-document.getElementById("order_id").value = orderId;
 
 // Zähler aktualisieren für nächste Bestellung
 localStorage.setItem(counterKey, count + 1);
