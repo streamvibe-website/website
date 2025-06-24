@@ -157,42 +157,48 @@
   
   
   
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const burger = document.getElementById("burger");
-      const mobileNav = document.getElementById("mobileNav");
-  
-      burger.addEventListener("click", function () {
-        mobileNav.classList.toggle("active");
-      });
-  
-      emailjs.init("rOOWW8c_d8K5xm4B9");
-  
-      const form = document.getElementById("bestellForm");
-  
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-  
-        // Mail an Kunden
-        emailjs.sendForm('service_xat84ce', 'template_d0ckp5q', this)
-          .then(function () {
-            alert("Danke für deine Bestellung! Du bekommst gleich eine Bestätigung per E-Mail.");
-            form.reset();
-          }, function (error) {
-            console.log('Kundenmail fehlgeschlagen', error);
-            alert("Fehler beim Absenden. Bitte versuch’s nochmal.");
-          });
-  
-        // Mail an dich (Admin)
-        emailjs.sendForm('service_xat84ce', 'template_kf20jvf', this)
-          .then(function () {
-            console.log("Admin-Mail gesendet");
-          }, function (error) {
-            console.log("Fehler beim Senden der Admin-Mail", error);
-          });
-      });
+  <!-- Erst die EmailJS-Bibliothek laden -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<!-- Dann dein eigener Code -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.getElementById("burger");
+    const mobileNav = document.getElementById("mobileNav");
+
+    burger.addEventListener("click", function () {
+      mobileNav.classList.toggle("active");
     });
-  </script>
+
+    // Init muss NACH dem Script-Import erfolgen!
+    emailjs.init("rOOWW8c_d8K5xm4B9");
+
+    const form = document.getElementById("bestellForm");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Mail an Kunden
+      emailjs.sendForm('service_xat84ce', 'template_d0ckp5q', this)
+        .then(function () {
+          alert("Danke für deine Bestellung! Du bekommst gleich eine Bestätigung per E-Mail.");
+          form.reset();
+        }, function (error) {
+          console.log('Kundenmail fehlgeschlagen', error);
+          alert("Fehler beim Absenden. Bitte versuch’s nochmal.");
+        });
+
+      // Admin-Mail
+      emailjs.sendForm('service_xat84ce', 'template_kf20jvf', this)
+        .then(function () {
+          console.log("Admin-Mail gesendet");
+        }, function (error) {
+          console.log("Fehler beim Senden der Admin-Mail", error);
+        });
+    });
+  });
+</script>
+
   
   
   
