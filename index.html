@@ -54,26 +54,22 @@
   
   <!-- 3 - Box schwebend -->
   
-  <section class="hero" id="start">
+  <section class="hero">
     <div class="hero-video-wrapper">
-      <video autoplay muted loop playsinline class="hero-video">
-        <source src="assets/heros/hero-box.mp4" type="video/mp4" media="(min-width: 769px)">
-        <source src="assets/heros/hero-box-mobile.mp4" type="video/mp4" media="(max-width: 768px)">
-      </video>
+      <video autoplay muted loop playsinline class="hero-video" id="videoHeroBox"></video>
     </div>
   </section>
+  
   
   
   <!-- 4 - Info -->
 
-  <section class="hero" id="start">
+  <section class="hero">
     <div class="hero-video-wrapper">
-      <video autoplay muted loop playsinline class="hero-video">
-        <source src="assets/heros/hero-box-info.mp4" type="video/mp4" media="(min-width: 769px)">
-        <source src="assets/heros/hero-box-info-mobile.mp4" type="video/mp4" media="(max-width: 768px)">
-      </video>
+      <video autoplay muted loop playsinline class="hero-video" id="videoHeroBoxInfo"></video>
     </div>
   </section>
+  
   
   
 
@@ -237,16 +233,35 @@ localStorage.setItem(counterKey, count + 1);
 <script>
   const isMobile = window.innerWidth <= 768;
 
-  const video = document.getElementById("videoHeroMain");
-  if (video) {
-    const source = document.createElement("source");
-    source.src = isMobile
-      ? "assets/heros/hero-main-mobile.mp4"
-      : "assets/heros/hero-main.mp4";
-    source.type = "video/mp4";
-    video.appendChild(source);
-  }
+  const videos = [
+    {
+      id: "videoHeroMain",
+      desktop: "assets/heros/hero-main.mp4",
+      mobile: "assets/heros/hero-main-mobile.mp4",
+    },
+    {
+      id: "videoHeroBox",
+      desktop: "assets/heros/hero-box.mp4",
+      mobile: "assets/heros/hero-box-mobile.mp4",
+    },
+    {
+      id: "videoHeroBoxInfo",
+      desktop: "assets/heros/hero-box-info.mp4",
+      mobile: "assets/heros/hero-box-info-mobile.mp4",
+    },
+  ];
+
+  videos.forEach(({ id, desktop, mobile }) => {
+    const video = document.getElementById(id);
+    if (video) {
+      const source = document.createElement("source");
+      source.src = isMobile ? mobile : desktop;
+      source.type = "video/mp4";
+      video.appendChild(source);
+    }
+  });
 </script>
+
  
   
 
