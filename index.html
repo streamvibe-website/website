@@ -108,6 +108,9 @@
       </label>
   
       <button type="submit">Bestellung absenden</button>
+      <input type="hidden" name="order_id" id="order_id">
+
+
     </form>
 
     <div class="order-icons">
@@ -177,6 +180,30 @@
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+
+// vor emailjs.sendForm()
+const today = new Date();
+const dd = String(today.getDate()).padStart(2, '0');
+const mm = String(today.getMonth() + 1).padStart(2, '0'); // Monate: 0–11
+const yyyy = today.getFullYear();
+const dateStr = `${dd}${mm}${yyyy}`;
+
+// Lade aktuelle Zahl aus localStorage oder beginne mit 1
+const counterKey = `streamvibe_order_${dateStr}`;
+let count = parseInt(localStorage.getItem(counterKey)) || 1;
+
+// Erzeuge Bestell-ID
+const paddedCount = String(count).padStart(3, '0');
+const orderId = `SV-${dateStr}-${paddedCount}`;
+
+// Füge die ID ins Formular ein
+document.getElementById("order_id").value = orderId;
+
+// Zähler aktualisieren für nächste Bestellung
+localStorage.setItem(counterKey, count + 1);
+
+
+
 
       // Mail an Kunden
       emailjs.sendForm('service_xat84ce', 'template_d0ckp5q', this)
