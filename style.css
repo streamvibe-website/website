@@ -390,3 +390,14 @@ body {
     }
   }
   
+
+  .order-icons {
+    background-color: #00ACB4;
+    padding: 3rem 2rem;
+    margin: 0; /* verhindert extra weißen Abstand */
+  }
+  
+  .order-icon {
+    color: white;
+  }
+  
