@@ -141,6 +141,8 @@ body {
   }
   
 
+
+  
   .order-open {
     background-color: #00ACB4;
     padding: 5rem 2rem;
@@ -400,5 +402,10 @@ body {
   
   .order-icon {
     color: white;
+  }
+  
+
+  #nova {
+    scroll-margin-top: 100px;
   }
   
