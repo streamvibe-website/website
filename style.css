@@ -16,7 +16,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #000;
+    
   }
   
   body, html {
@@ -236,6 +236,7 @@ body {
     justify-content: center;
     gap: 2rem;
     margin-top: 3rem;
+    
   }
   
   .order-icon {
@@ -443,4 +444,43 @@ body {
     text-decoration: underline;
   }
   
+  body.legal-page {
+    background-color: #000;
+    color: #f1f1f1;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .legal-page .legal-wrapper {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: #111;
+    border: 1px solid #222;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 172, 180, 0.2);
+  }
+  
+  .legal-page h1,
+  .legal-page h2 {
+    color: #00acb4;
+    margin-top: 2rem;
+  }
+  
+  .legal-page p,
+  .legal-page li {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .legal-page a {
+    color: #00acb4;
+    text-decoration: none;
+  }
+  
+  .legal-page a:hover {
+    text-decoration: underline;
+  }
   
